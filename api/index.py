@@ -5,5 +5,5 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "secureportal.settings")
 
 app = get_asgi_application()
 
-def handler(scope, receive, send):
-    return app(scope, receive, send)
+async def handler(scope, receive, send):
+    await app(scope, receive, send)
